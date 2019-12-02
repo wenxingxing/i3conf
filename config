@@ -288,10 +288,13 @@ exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id xset r rate 185 40
-exec --no-startup-id xrandr --output DP2 --right-of DP1 --rotate right
 exec --no-startup-id ibus-daemon --xim -d -r
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+
+exec --no-startup-id xrandr --auto
+exec --no-startup-id xrandr --output DP1 --primary
+exec --no-startup-id xrandr --output DP2 --right-of DP1 --rotate right
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
